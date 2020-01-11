@@ -12,77 +12,117 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="script.js">
 <title>LIvely</title>
 
 </head>
 <body>
-    <div class="jumbotron jumbotron-fluid">
-  <div class="container">
-    <h1 class="display-4">LIvely</h1>
-    <p class="lead">Music is life, every new rhythm gives life a whole new meaning. </p>
-    <div style= "clear: both;"></div>
-</div>
-</div>
-
+  <div class="jumbotron jumbotron-fluid">
+    <div class="container">
+      <h1 class="display-4">LIvely</h1>
+      <p class="lead">Music is life, every new rhythm gives life a whole new meaning. </p>
+        <div style= "clear: both;"></div>
+    </div>
+  </div>
+<!--Area to put the artist name or band name user searched for (local storage)-->
 <div class="container-fluid">
     <div class="row">
-      <nav class="col-3  bg-light sidebar">
-        <div class="sidebar-sticky" id="crapSideBar">
-            <div class="form-row">
-                  <input type="text" class="form-control" placeholder="Artist, Songname, lyrics etc.">
-                  <button type="button" class="btn btn-dark">Search</button>
-            </div>
-
-        
-            
-          <ul class="nav flex-column mb-2 searchColumn" id="recentCrap">
-          </ul>
-
-          
-        </div>
+      <nav class="col-3">
+          <div class="form-row">
+              <div class="input-group searchbar">
+                <div class="input-group-button">
+                  <button class="button search"><svg width="100" height="100" viewBox="0 0 100 100">
+                    <path fill="#FFF" fill-rule="evenodd" d="M42.117,12.246 C50.1209,12.246 57.797,15.4257 63.453,21.0858 C69.1132,26.742 72.2928,34.4178 72.2928,42.4218 C72.2928,50.4258 69.1131,58.1018 63.453,63.7578 C57.7968,69.418 50.121,72.5976 42.117,72.5976 C34.1131,72.5976 26.437,69.4179 20.781,63.7578 C15.1208,58.1016 11.9412,50.4258 11.9412,42.4218 C11.9412,34.4178 15.1209,26.7418 20.781,21.0858 C26.4372,15.4256 34.113,12.246 42.117,12.246 L42.117,12.246 Z M76.0828827,67.3362833 C82.3527829,58.7859894 85.2617455,48.0434678 83.9173,37.22271 C82.0618,22.28871 72.3743,9.47671 58.5153,3.61771 L58.51139,3.61771 C53.32389,1.41851 47.74139,0.28961 42.10539,0.29741 L42.117,0.305 C29.058,0.30891 16.742,6.3675 8.769001,16.707 C0.7924008,27.047 -1.933999,40.5 1.382301,53.129 C4.698701,65.758 13.6833,76.137 25.7103,81.223 L25.7103,81.22691 C39.5733,87.08631 55.5113,85.10191 67.5153,76.02771 C67.5852345,75.9748392 67.6549736,75.9217748 67.724517,75.8685177 L91.555,99.6990032 L100.0003,91.253703 L76.0828827,67.3362833 Z"/>
+                      </svg>
+                  </button>
+                </div>
+                <input class="input-field search-field" type="search" placeholder="Search for anything..." />
+              </div>
+          </div>
         <div class="col-9"></div>
       </nav>
     </div>
   </div>
-  
+
+<!--Artist or band name infor and songs in this section. Each block we can add different things for example songs in one, albums in another, featured songs etc  -->  
 <div class="container">
     <div class= "row">
+      <div class= "col-3"></div>
         <div class="col-9">     
 
-        </div>
-<div class="col-3">
-    <h1>linkin</h1>
-</div>
-        </div>
+          <div class="header-grid">
+            <div id="b1" class="block"></div>
+            <div id="b2" class="block"></div>
+            <div id="b3" class="block"></div>
+            <div id="b4" class="block"></div>
+          <div class="bottom-block">
+            <div id="b5" class="block"></div>
+            <div id="b6" class="block"></div>
+            <div id="b7" class="block"></div>
+      </div> 
     </div>
+   </div>
+  </div>
 </div>
+
  
+ <!--make the similar artist section pop up when we find a artist or band name-->
+<div id="similarArtists" class=" w-100">
+    
+    <div class="card-user-container">
 
-   
+      <!--card's image-->
+      <div class="card-user-avatar">
+        <img src="https://placehold.it/200x200" alt="" class="user-image">
+      </div>
+    
+      <!--user info name, bio and location-->
+      <div class="card-user-bio">
+        <h4>User Name</h4>
+        <p>UX/UI ,Front-end developer, Foundation interested. </p>
+        <span class="location"><span class="location-icon fa fa-map-marker"></span><span class="location-text">Makkah Al-Mukaramah</span></span>
+      </div>
+    
+      <!--card's socail icons-->
+      <div class="card-user-social">
+        <ul class="menu">
+          <li class="fa fa-twitter"></li>
+          <li class="fa fa-dribbble"></li>
+          <li class="fa fa-instagram"></li>
+          <li class="fa fa-github"></li>
+        </ul>
+      </div>
+    
+      <!--card's follow button-->
+      <div class="card-user-button">
+        <a href="#" class="hollow button">FOLLOW</a>
+      </div>
+    </div>
 
+    </div>
 
     
-
-
-
-
- 
-<div id="similarArtists" class=" w-100">
-    <p>Similar Artists</p>
-    </div>
-
-<footer>
-  &copy; <p>2020</p>
-</footer>
-     
-
-
-
-
+<!--footer where we can link "company's" social media-->
+<div class="footer">
+  <p class="mx-auto">Copyright 2020</p>
+  <div class="rounded-social-buttons">
+    <a class="social-button facebook" href="#"></a>
+    <a class="social-button twitter" href="#"></a>
+    <a class="social-button youtube" href="#"></a>
+    <a class="social-button instagram" href="#"></a>
+    <a class="social-button github" href="#"></a>
+  </div>
+</div>
+  
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  <!-- Compressed CSS -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/foundation-sites@6.4.3/dist/css/foundation.min.css" integrity="sha256-GSio8qamaXapM8Fq9JYdGNTvk/dgs+cMLgPeevOYEx0= sha384-wAweiGTn38CY2DSwAaEffed6iMeflc0FMiuptanbN4J+ib+342gKGpvYRWubPd/+ sha512-QHEb6jOC8SaGTmYmGU19u2FhIfeG+t/hSacIWPpDzOp5yygnthL3JwnilM7LM1dOAbJv62R+/FICfsrKUqv4Gg==" crossorigin="anonymous">
+
+<!-- Compressed JavaScript -->
+<script src="https://cdn.jsdelivr.net/npm/foundation-sites@6.4.3/dist/js/foundation.min.js" integrity="sha256-mRYlCu5EG+ouD07WxLF8v4ZAZYCA6WrmdIXyn1Bv9Vk= sha384-KzKofw4qqetd3kvuQ5AdapWPqV1ZI+CnfyfEwZQgPk8poOLWaabfgJOfmW7uI+AV sha512-0gHfaMkY+Do568TgjJC2iMAV0dQlY4NqbeZ4pr9lVUTXQzKu8qceyd6wg/3Uql9qA2+3X5NHv3IMb05wb387rA==" crossorigin="anonymous"></script>
   </body>
 </html>
